@@ -1,0 +1,832 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: header-top-font;
+    src: url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto+Mono:ital,wght@0,100;0,200;1,100;1,200&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+}
+
+@font-face {
+    font-family: body-top-font;
+    src: url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto+Mono:ital,wght@0,100;0,200;1,100;1,200&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+}
+
+@font-face {
+    font-family: common-font;
+    src: url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@300;400;500;600;700;800;900&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Roboto+Mono:ital,wght@0,100;0,200;1,100;1,200&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+}
+
+@media screen and (max-width: 768px){
+    header{
+        width: 100%;
+    }
+    .header-top{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        height: 45px;
+        color:white;
+        font-family: "header-top-font", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .header-top-arrow{
+        position: absolute;
+        font-size: 15px;
+        top: 16px;
+        right: 15px;
+    }
+
+    .header-foot{
+        position: relative;
+        height:60px;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .three-lines{
+        position: relative;
+        width: 40px;
+        background-color: white;
+        border-color: transparent;
+        bottom: 7px;
+        left: 12px;
+    }
+
+    .line-1{
+        position: absolute;
+        top:-4px;
+        height:1.8px;
+        width: 24px;
+        border-radius: 10px;
+        background-color: black;
+    }
+
+    .line-2{
+        position: absolute;
+        height:1.8px;
+        width: 24px;
+        border-radius: 10px;
+        background-color: black;
+    }
+
+    .line-3{
+        position: absolute;
+        height:1.8px;
+        width: 24px;
+        border-radius: 10px;
+        background-color: black;
+        top:8px;
+    }
+
+    .icon{
+        height: 100%;
+        width: 100%;
+    }
+
+    .header-foot-heart-button{
+        position: relative;
+        width: 40px;
+        background-color: white;
+        border-color: transparent;
+        left: 17px;
+        font-size:17px;
+    }
+
+    .adidas-icon-button{
+        height: 42px;
+        width: 67px;
+        background-color: white;
+        border-color: transparent;
+        position: relative;
+        left: 15px;
+    }
+
+    .person-button{
+        background-color: white;
+        border-color: transparent;
+        height: 27px;
+        width: 35px;
+        position: relative;
+        right: 15px;
+        top: 5px;
+    }
+
+    .header-foot-end{
+        position: relative;
+    }
+
+    .notification-count{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: yellow;
+        left:2px;
+        bottom:25px;
+        animation-name: moving-number;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes moving-number {
+        44%{
+            transform: translate(0,0);
+        }
+        46%{
+            transform: translate(0,-6px);
+        }
+        48%{
+            transform: translate(0,0);
+        }
+        53%{
+            transform: translate(0,-6px);
+        }
+        55%{
+            transform: translate(0,0);
+        }
+    }
+
+    .notification-count>span{
+        position: absolute;
+        font-size: 15px;
+        left:7px;
+        top: 3.5px;
+    }
+
+    .search-button{
+        position: relative;
+        right: 10px;
+        background-color: white;
+        border-color: transparent;
+        height: 40px;
+        width: 40px;
+        font-size: 17px;
+        top: 2px;
+    }
+
+    .bag-button{
+        position: relative;
+        background-color: white;
+        border-color: transparent;
+        height: 30px;
+        width: 35px;
+        font-size: 17px;
+        right: 5px;
+        top: 5px;
+    }
+
+    .body-top{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "body-top-font", sans-serif;
+        font-size: 17px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-weight: 100;
+    }
+
+    .body-top-button{
+        background-color: black;
+        color: white;
+        font-size: 17px;
+        font-weight: 300;
+        border-color: transparent;
+        text-decoration: underline;
+    }
+
+    .body-top-x{
+        position: absolute;
+        font-size: 15px;
+        top: 19px;
+        right: 12px;
+    }
+
+    .body-first-picture{
+        position: relative;
+        height: 740px;
+    }
+
+    .bfp-span-1{
+        position: absolute;
+        top:460px;
+        left: 12px;
+        font-weight: 700;
+        font-size: 27px;
+    }
+
+    .bfp-span-2{
+        position: absolute;
+        font-size: 19px;
+        top:540px;
+        left: 12px;
+    }
+
+    .bfp-div-base{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-image: url(./images/bfp.webp);
+        background-size: cover;
+        background-position: 30%;
+    }
+
+    .bfp-button-1{
+        z-index: 1;
+        position: absolute;
+        top: 575px;
+        height: 50px;
+        width: 140px;
+        background-color: black;
+        color: white;
+        border-color: transparent;
+        left: 12px;
+        font-size: 16px;
+    }
+
+    .bfp-button-1:hover{
+        color: gray;
+    }
+
+    .bfp-button-1:active{
+        transform: translate(3px,3px);
+    }
+
+    .bpf-button-1-background{
+        position: absolute;
+        top:577px;
+        left:16px;
+        height: 50px;
+        width: 138px;
+        border: 1px solid black;
+    }
+
+    .bfp-button-2{
+        z-index: 3;
+        position: absolute;
+        height: 50px;
+        width: 160px;
+        background-color: black;
+        color: white;
+        border-color: transparent;
+        top:640px;
+        left: 12px;
+        font-size: 16px;
+    }
+
+    .bfp-button-2:hover{
+        color: gray;
+    }
+
+    .bfp-button-2:active{
+        transform: translate(3px,3px);
+    }
+
+    .bpf-button-2-background{
+        position: absolute;
+        top:642px;
+        left:16px;
+        height: 50px;
+        width: 158px;
+        border: 1px solid black;
+    }
+
+    .axis-right-icon{
+        padding-left: 13px;
+    }
+
+    .common-options{
+        position: relative;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;    }
+
+    .common-options-1{
+        position:relative;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+    }
+
+    .common-option-1{
+        position: relative;
+        height: 150px;
+        width: 362px;
+        background-image: url(./images/shoe-1.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-color: #edf2ef;
+    }
+
+    .common-option-2{
+        position: relative;
+        height: 150px;
+        width: 362px;
+        background-image: url(./images/shoe-2.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-color: #edf2ef;
+    }
+
+    .common-options-2{
+        position:relative;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+    }
+
+    .common-option-3{
+        position: relative;
+        height: 150px;
+        width: 362px;
+        background-image: url(./images/trousers.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-color: #edf2ef;
+    }
+
+    .common-option-4{
+        position: relative;
+        height: 150px;
+        width: 362px;
+        background-image: url(./images/shoe-3.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-color: #edf2ef;
+    }
+
+    .common-shoes{
+        position: absolute;
+        text-decoration: underline;
+        top:55px;
+        left: 10px;
+    }
+
+    .common-best-sellers{
+        position: absolute;
+        text-decoration: underline;
+        top:55px;
+        left: 10px;
+    }
+
+    .common-clothing{
+        position: absolute;
+        text-decoration: underline;
+        top:55px;
+        left: 10px;
+    }
+
+    .common-new-arrivals{
+        position: absolute;
+        text-decoration: underline;
+        top:55px;
+        left: 10px;
+    }
+
+    .common:hover{
+        background-color: black;
+        color: white;
+        text-decoration: none;
+    }
+
+    .new-arrivals{
+        height: 50px;
+        position: relative;
+    }
+
+    .new-arrivals-button{
+        position: absolute;
+        left:15px;
+        top: 11px;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: gainsboro;
+        background-color: white;
+        border-color: transparent;
+    }
+
+    .new-arrivals-button:active{
+        color: black;
+    }
+
+    .trending-button{
+        position: absolute;
+        top: 11px;
+        left: 165px;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: gainsboro;
+        background-color: white;
+        border-color: transparent;
+    }
+
+    .trending-button:active{
+        color: black;
+    }
+
+    .exclusives-button{
+        position: absolute;
+        top: 11px;
+        left: 355px;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: gainsboro;
+        background-color: white;
+        border-color: transparent;
+    }
+
+    .exclusives-button:active{
+        color: black;
+    }
+
+    .shoes-scroll{
+        position:relative;
+        height: 340px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+    .heart-icon-scroll-1{
+        position: absolute;
+        left: 185px;
+        top: 20px;
+    }
+
+    .heart-icon-scroll-2{
+        position: absolute;
+        left: 185px;
+        top: 20px;
+    }
+
+    .heart-icon-scroll-3{
+        position: absolute;
+        left: 185px;
+        top: 20px;
+    }
+
+    .scroll-price-1{
+        height: 20px;
+        width: 40px;
+        position: absolute;
+        left: 10px;
+        top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+
+    .scroll-price-2{
+        height: 20px;
+        width: 40px;
+        position: absolute;
+        left: 10px;
+        top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+
+    .scroll-price-3{
+        height: 20px;
+        width: 40px;
+        position: absolute;
+        left: 10px;
+        top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+
+    .scroll-price-1:hover{
+        transform: translateY(-5px);
+    }
+
+    .scroll-price-2:hover{
+        transform: translateY(-5px);
+    }
+
+    .scroll-price-3:hover{
+        transform: translateY(-5px);
+    }
+
+    .shoes-scroll-1{
+        width: 220px;
+        position: relative;
+    }
+
+    .shoes-scroll-2{
+        width: 220px;
+        position: relative;
+    }
+
+    .shoes-scroll-3{
+        width: 220px;
+        position: relative;
+    }
+
+    .scroll-shoe-img-1{
+        height: 220px;
+        width: 220px;
+    }
+
+    .scroll-shoe-img-2{
+        height: 220px;
+        width: 220px;
+    }
+
+    .scroll-shoe-img-3{
+        height: 220px;
+        width: 220px;
+    }
+
+    .scroll-id-1{
+        position: relative;
+        left: 15px;
+        top: 5px;
+    }
+
+    .scroll-gender-1{
+        position: relative;
+        left: -77px;
+        top: 25px;
+        font-size: 14px;
+        color: gray;
+        border: 1px solid transparent;
+    }
+
+    .scroll-type-1{
+        position: relative;
+        left: 15px;
+        top: 27px;
+        font-size: 14px;
+    }
+
+    .scroll-id-2{
+        position: relative;
+        left: 15px;
+        top: 5px;
+    }
+
+    .scroll-gender-2{
+        position: relative;
+        left: -145px;
+        top: 25px;
+        font-size: 14px;
+        color: gray;
+    }
+
+    .scroll-type-2{
+        position: relative;
+        left: -175px;
+        top: 45px;
+        font-size: 14px;
+    }
+
+    .scroll-id-3{
+        position: relative;
+        left: 15px;
+        top: 5px;
+    }
+
+    .scroll-gender-3{
+        position: relative;
+        left: -145px;
+        top: 25px;
+        font-size: 14px;
+        color: gray;
+    }
+
+    .scroll-type-3{
+        position: relative;
+        left: -175px;
+        top: 45px;
+        font-size: 14px;
+    }
+
+    .view-all-button-div{
+        height: 70px;
+    }
+    
+    .view-all-button{
+        position: relative;
+        left:20px;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: underline;
+        border-color: transparent;
+        background-color: transparent;
+        padding:0;
+    }
+
+    .view-all-button:hover{
+        color: white;
+        background-color: black;
+        text-decoration: none;
+    }
+
+    .shopping-options{
+        display: flex;
+        height: 570px;
+        justify-content: space-evenly;
+    }
+
+    .shopping-options-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 330px;
+
+    }
+
+    .shopping-options-picture-1{
+        height: 430px;
+        width: 330px;
+    }
+
+    .shopping-options-style-1{
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .shopping-options-text-1{
+        font-size: 14px;
+        color: gray;
+        position: relative;
+        top: -10px;
+    }
+
+    .shopping-options-shop-now-button-1{
+        padding-left: 0;
+        width: 88px;
+        border-color: transparent;
+        background-color: transparent;
+        color: black;
+        text-decoration: underline;
+        font-weight: 600;
+        font-size: 14px;
+        position: relative;
+        left: -5px;
+        padding: 0;
+        top: -15px;
+    }
+
+    .shopping-options-shop-now-button:hover{
+        background-color: black;
+        color: white;
+        text-decoration: none;
+    }
+
+    .shopping-options-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 330px;
+        position: relative;
+    }
+
+    .shopping-options-picture-2{
+        height: 430px;
+        width: 330px;
+        position: relative;
+        top: -3px;
+    }
+
+    .shopping-options-style-2{
+        font-weight: 600;
+        font-size: 18px;
+        position: relative;
+        top: -5px;
+    }
+
+    .shopping-options-text-2{
+        font-size: 14px;
+        color: gray;
+        position: relative;
+        top: -19px;
+    }
+
+    .shopping-options-shop-now-button-2{
+        padding-left: 0;
+        width: 88px;
+        border-color: transparent;
+        background-color: transparent;
+        color: black;
+        text-decoration: underline;
+        font-weight: 600;
+        font-size: 14px;
+        position: relative;
+        left: -5px;
+        padding: 0;
+        top: -12px;
+    }
+
+    .yellow-part{
+        height: 180px;
+        background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .yellow-part-join{
+        font-size: 33px;
+        font-weight: 600;
+        top: 20px;
+    }
+
+    .yellow-part-button{
+        font-size: 15px;
+        font-weight: 600;
+        height: 50px;
+        width: 190px;
+        color: white;
+        background-color: black;
+        border-color: transparent;
+        position: relative;
+        left:-4px;
+        top:-3px;
+    }
+
+    .yellow-part-button-background{
+        height: 49px;
+        width: 188px;
+        border: 1px solid black;
+        left: 4px;
+        top: 3px;
+    }
+
+    .yellow-part-button:hover{
+        color: gray;
+    }
+
+    .yellow-part-button:active{
+        left:0px;
+        top:0px;
+    }
+
+    .footer-top{
+        background-color: black;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0;
+    }
+
+    .footer-head-button{
+        width: 200px;
+        height: 40px;
+        color: white;
+        background-color: transparent;
+        border-color:transparent;
+    }
+
+    .above-yellow-part{
+        height: 50px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+    }
+
+    .above-yellow-part-button{
+        font-size: 13px;
+        font-weight: 500;
+        color: white;
+        background-color: transparent;
+        border-color:transparent ;
+        
+    }
+}   
+
+
+@media screen and (min-width: 769px){
+    
+}
